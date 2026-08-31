@@ -1,0 +1,18 @@
+# 签名密钥绝不入库
+*.keystore
+*.jks
+
+# 本机路径
+local.properties
+
+# 构建产物
+build/
+.gradle/
+*.apk
+*.aab
+captures/
+
+# IDE
+.idea/
+*.iml
+.DS_Store

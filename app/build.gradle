@@ -1,0 +1,51 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.remouse.tv'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.remouse.tv"
+        minSdk 24
+        targetSdk 33
+        versionCode 30
+        versionName "3.0"
+    }
+
+    // 有 platform.keystore 就用平台签名，没有就退回默认 debug 签名。
+    // keystore 不在仓库里，克隆下来直接能构建。
+    def platformKeystore = file("${rootDir}/platform.keystore")
+
+    signingConfigs {
+        if (platformKeystore.exists()) {
+            platform {
+                storeFile platformKeystore
+                storePassword System.getenv("PLATFORM_KEYSTORE_PASSWORD") ?: "android"
+                keyAlias System.getenv("PLATFORM_KEY_ALIAS") ?: "platform"
+                keyPassword System.getenv("PLATFORM_KEY_PASSWORD") ?: "android"
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            if (platformKeystore.exists()) {
+                signingConfig signingConfigs.platform
+            }
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+}

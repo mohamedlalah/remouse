@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="bg_primary">#FF0D1B2A</color>
+    <color name="bg_secondary">#FF1B2838</color>
+    <color name="bg_card">#CC1E3045</color>
+    <color name="bg_card_border">#4400D4FF</color>
+
+    <color name="accent_cyan">#FF00D4FF</color>
+    <color name="accent_cyan_dim">#8800D4FF</color>
+    <color name="accent_gradient_start">#FF00D4FF</color>
+    <color name="accent_gradient_end">#FF0066FF</color>
+    <color name="accent_orange">#FFFF8C00</color>
+    <color name="accent_green">#FF00E676</color>
+    <color name="accent_red">#FFFF5252</color>
+
+    <color name="text_primary">#FFFFFFFF</color>
+    <color name="text_secondary">#CCB0BEC5</color>
+    <color name="text_hint">#8890A4AE</color>
+
+    <color name="cursor_color">#FF00D4FF</color>
+    <color name="cursor_glow">#6600D4FF</color>
+    <color name="cursor_click_ripple">#4400D4FF</color>
+
+    <color name="scroll_indicator">#FFFF8C00</color>
+    <color name="scroll_glow">#66FF8C00</color>
+
+    <!-- iOS 极简设计系统颜色 -->
+    <color name="bg_ios_dark">#FF1C1C1E</color>
+    <color name="bg_ios_card">#FF2C2C2E</color>
+    <color name="bg_ios_card_border">#FF3A3A3C</color>
+    <color name="ios_green">#FF34C759</color>
+    <color name="ios_blue">#FF007AFF</color>
+    <color name="ios_gray">#FF8E8E93</color>
+    <color name="ios_yellow">#FFFFCC00</color>
+    <color name="ios_red">#FFFF453A</color>
+</resources>
