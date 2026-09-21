@@ -215,7 +215,7 @@ public class CursorAccessibilityService extends AccessibilityService {
             statusListener.onServiceStatusChanged(true);
         }
 
-        Toast.makeText(this, paused ? "Remouse 已启动（当前暂停中，长按返回键恢复）" : "Remouse 已启动 ✓",
+        Toast.makeText(this, paused ? R.string.toast_started_paused : R.string.toast_started,
                 Toast.LENGTH_SHORT).show();
     }
 
@@ -438,7 +438,7 @@ public class CursorAccessibilityService extends AccessibilityService {
 
         applyPausedState();
 
-        Toast.makeText(this, paused ? "Remouse 已暂停 ⏸  长按返回键恢复" : "Remouse 已恢复 ▶",
+        Toast.makeText(this, paused ? R.string.toast_paused : R.string.toast_resumed,
                 Toast.LENGTH_SHORT).show();
 
         if (settings.isHapticEnabled() && vibrator != null) {
@@ -703,7 +703,7 @@ public class CursorAccessibilityService extends AccessibilityService {
             }
             scheduleHoverRefresh();
 
-            String msg = newScrollMode ? "已切换到滚动模式 ↕" : "已切换到光标模式 ✛";
+            String msg = getString(newScrollMode ? R.string.toast_mode_scroll : R.string.toast_mode_cursor);
             Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 
             if (settings.isHapticEnabled() && vibrator != null) {
@@ -720,12 +720,12 @@ public class CursorAccessibilityService extends AccessibilityService {
             int newSpeed = settings.getScrollSpeed() + delta;
             newSpeed = Math.max(1, Math.min(10, newSpeed));
             settings.setScrollSpeed(newSpeed);
-            Toast.makeText(this, "滚动速度: " + newSpeed, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.toast_scroll_speed, newSpeed), Toast.LENGTH_SHORT).show();
         } else {
             int newSpeed = settings.getCursorSpeed() + delta;
             newSpeed = Math.max(1, Math.min(10, newSpeed));
             settings.setCursorSpeed(newSpeed);
-            Toast.makeText(this, "光标速度: " + newSpeed, Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.toast_cursor_speed, newSpeed), Toast.LENGTH_SHORT).show();
         }
 
         if (settings.isHapticEnabled() && vibrator != null) {

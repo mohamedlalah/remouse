@@ -3,64 +3,69 @@
   xmlns:android="http://schemas.android.com/apk/res/android">
     <LinearLayout android:gravity="center_horizontal" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content">
         <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="24.0dip">
-            <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_launcher" android:layout_marginEnd="12.0dip" />
+            <ImageView android:layout_width="48.0dip" android:layout_height="48.0dip" android:src="@drawable/ic_launcher" android:importantForAccessibility="no" android:layout_marginEnd="12.0dip" />
             <TextView android:textSize="28.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/app_name" />
         </LinearLayout>
         <LinearLayout android:gravity="center" android:orientation="vertical" android:id="@+id/card_status" android:background="@drawable/bg_card" android:padding="20.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
-            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/accent_orange" android:id="@+id/tv_service_status" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/service_status_disabled" />
-            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@+id/btn_toggle_service" android:background="@drawable/bg_button_gradient" android:layout_width="280.0dip" android:layout_height="52.0dip" android:text="@string/btn_enable_service" android:textAllCaps="false" />
+            <TextView android:textSize="18.0sp" android:textStyle="bold" android:textColor="@color/accent_orange" android:id="@+id/tv_service_status" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip" android:text="@string/service_status_disabled" />
+            <Button android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/text_primary" android:id="@+id/btn_toggle_service" android:background="@drawable/bg_button_gradient" android:layout_width="wrap_content" android:minWidth="280dp" android:layout_height="wrap_content" android:minHeight="52dp" android:paddingStart="24dp" android:paddingEnd="24dp" android:text="@string/btn_enable_service" android:textAllCaps="false" />
         </LinearLayout>
         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
             <LinearLayout android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip">
                 <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_cursor_speed" android:layout_weight="1.0" />
-                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:id="@+id/tv_cursor_speed_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_cursor_speed" android:labelFor="@id/seekbar_cursor_speed" android:layout_weight="1.0" />
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:id="@+id/tv_cursor_speed_value" android:textDirection="ltr" android:layout_width="wrap_content" android:layout_height="wrap_content" />
                 </LinearLayout>
-                <SeekBar android:id="@+id/seekbar_cursor_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:max="9" android:progress="4" android:progressTint="@color/accent_cyan" android:thumbTint="@color/accent_cyan" />
+                <SeekBar android:layoutDirection="ltr" android:id="@+id/seekbar_cursor_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:max="9" android:progress="4" android:progressTint="@color/accent_cyan" android:thumbTint="@color/accent_cyan" />
             </LinearLayout>
             <LinearLayout android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip">
                 <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                    <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_scroll_speed" android:layout_weight="1.0" />
-                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/scroll_indicator" android:id="@+id/tv_scroll_speed_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="5" />
+                    <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_scroll_speed" android:labelFor="@id/seekbar_scroll_speed" android:layout_weight="1.0" />
+                    <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/scroll_indicator" android:id="@+id/tv_scroll_speed_value" android:textDirection="ltr" android:layout_width="wrap_content" android:layout_height="wrap_content" />
                 </LinearLayout>
-                <SeekBar android:id="@+id/seekbar_scroll_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:max="9" android:progress="4" android:progressTint="@color/scroll_indicator" android:thumbTint="@color/scroll_indicator" />
+                <SeekBar android:layoutDirection="ltr" android:id="@+id/seekbar_scroll_speed" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:max="9" android:progress="4" android:progressTint="@color/scroll_indicator" android:thumbTint="@color/scroll_indicator" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="8.0dip">
-                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_acceleration" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_acceleration" android:labelFor="@id/switch_acceleration" android:layout_weight="1.0" />
                 <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_acceleration" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
             </LinearLayout>
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="8.0dip">
-                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_haptic" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_haptic" android:labelFor="@id/switch_haptic" android:layout_weight="1.0" />
                 <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_haptic" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginEnd="6.0dip">
-                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_snap" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_snap" android:labelFor="@id/switch_snap" android:layout_weight="1.0" />
                 <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_snap" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
             </LinearLayout>
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="6.0dip" android:layout_marginEnd="6.0dip">
-                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_auto_hide" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_auto_hide" android:labelFor="@id/switch_auto_hide" android:layout_weight="1.0" />
                 <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_auto_hide" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
             </LinearLayout>
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="0.0dip" android:layout_height="wrap_content" android:layout_weight="1.0" android:layout_marginStart="6.0dip">
-                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_highlight" android:layout_weight="1.0" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_highlight" android:labelFor="@id/switch_highlight" android:layout_weight="1.0" />
                 <androidx.appcompat.widget.SwitchCompat android:id="@+id/switch_highlight" android:layout_width="wrap_content" android:layout_height="wrap_content" android:checked="true" />
             </LinearLayout>
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
             <LinearLayout android:gravity="center_vertical" android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content">
-                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_cursor_size" android:layout_weight="1.0" />
-                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:id="@+id/tv_cursor_size_value" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="48dp" />
+                <TextView android:textSize="15.0sp" android:textColor="@color/text_primary" android:layout_width="0.0dip" android:layout_height="wrap_content" android:text="@string/label_cursor_size" android:labelFor="@id/seekbar_cursor_size" android:layout_weight="1.0" />
+                <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:id="@+id/tv_cursor_size_value" android:textDirection="ltr" android:layout_width="wrap_content" android:layout_height="wrap_content" />
             </LinearLayout>
-            <SeekBar android:id="@+id/seekbar_cursor_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:max="72" android:progress="24" android:progressTint="@color/accent_cyan" android:thumbTint="@color/accent_cyan" />
+            <SeekBar android:layoutDirection="ltr" android:id="@+id/seekbar_cursor_size" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:max="72" android:progress="24" android:progressTint="@color/accent_cyan" android:thumbTint="@color/accent_cyan" />
         </LinearLayout>
         <LinearLayout android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginBottom="16.0dip">
             <TextView android:textSize="16.0sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginBottom="8.0dip" android:text="@string/about_help" />
-            <TextView android:textSize="14.0sp" android:textColor="@color/text_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_text" android:lineSpacingExtra="4.0dip" />
+            <TextView android:textSize="14.0sp" android:textColor="@color/text_secondary" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/help_text" android:gravity="start" android:lineSpacingExtra="4.0dip" />
         </LinearLayout>
-        <TextView android:textSize="12.0sp" android:textColor="@color/text_hint" android:id="@+id/tv_version" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" android:text="v1.5" />
+        <LinearLayout android:orientation="vertical" android:background="@drawable/bg_card" android:padding="16dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="16dp" android:focusable="false">
+            <TextView android:textSize="16sp" android:textStyle="bold" android:textColor="@color/accent_cyan" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="8dp" android:gravity="start" android:text="@string/section_about" android:focusable="false" />
+            <TextView android:textSize="14sp" android:textColor="@color/text_secondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginBottom="4dp" android:gravity="start" android:text="@string/credits_original" android:focusable="false" />
+            <TextView android:textSize="14sp" android:textColor="@color/text_secondary" android:layout_width="match_parent" android:layout_height="wrap_content" android:gravity="start" android:text="@string/credits_adaptation" android:focusable="false" />
+        </LinearLayout>
+        <TextView android:textSize="12.0sp" android:textColor="@color/text_hint" android:id="@+id/tv_version" android:textDirection="ltr" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="8.0dip" />
     </LinearLayout>
 </ScrollView>

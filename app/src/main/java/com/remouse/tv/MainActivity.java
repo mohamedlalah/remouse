@@ -73,15 +73,15 @@ public class MainActivity extends AppCompatActivity implements CursorAccessibili
     private void loadSettings() {
         int cursorSpeed = settings.getCursorSpeed();
         seekbarCursorSpeed.setProgress(cursorSpeed - 1);
-        tvCursorSpeedValue.setText(String.valueOf(cursorSpeed));
+        tvCursorSpeedValue.setText(getString(R.string.format_speed_value, cursorSpeed));
 
         int scrollSpeed = settings.getScrollSpeed();
         seekbarScrollSpeed.setProgress(scrollSpeed - 1);
-        tvScrollSpeedValue.setText(String.valueOf(scrollSpeed));
+        tvScrollSpeedValue.setText(getString(R.string.format_speed_value, scrollSpeed));
 
         int cursorSize = settings.getCursorSize();
         seekbarCursorSize.setProgress(cursorSize - 24);
-        tvCursorSizeValue.setText(cursorSize + "dp");
+        tvCursorSizeValue.setText(getString(R.string.format_cursor_size, cursorSize));
 
         switchAcceleration.setChecked(settings.isAccelerationEnabled());
         switchHaptic.setChecked(settings.isHapticEnabled());
@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity implements CursorAccessibili
         switchHighlight.setChecked(settings.isHighlightEnabled());
 
         if (tvVersion != null) {
-            tvVersion.setText("v" + BuildConfig.VERSION_NAME);
+            tvVersion.setText(getString(R.string.format_version, BuildConfig.VERSION_NAME));
         }
     }
 
@@ -107,9 +107,9 @@ public class MainActivity extends AppCompatActivity implements CursorAccessibili
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             try {
                 startActivity(intent);
-                Toast.makeText(this, "请找到 \"Remouse\" 并启用", Toast.LENGTH_LONG).show();
+                Toast.makeText(this, getString(R.string.toast_enable_instructions, getString(R.string.app_name)), Toast.LENGTH_LONG).show();
             } catch (Exception e) {
-                Toast.makeText(this, "无法打开无障碍设置", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, getString(R.string.toast_accessibility_error), Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements CursorAccessibili
                 if (!fromUser) return;
                 int value = progress + 1;
                 settings.setCursorSpeed(value);
-                tvCursorSpeedValue.setText(String.valueOf(value));
+                tvCursorSpeedValue.setText(getString(R.string.format_speed_value, value));
             }
         });
 
@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements CursorAccessibili
                 if (!fromUser) return;
                 int value = progress + 1;
                 settings.setScrollSpeed(value);
-                tvScrollSpeedValue.setText(String.valueOf(value));
+                tvScrollSpeedValue.setText(getString(R.string.format_speed_value, value));
             }
         });
 
@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements CursorAccessibili
                 if (!fromUser) return;
                 int value = progress + 24;
                 settings.setCursorSize(value);
-                tvCursorSizeValue.setText(value + "dp");
+                tvCursorSizeValue.setText(getString(R.string.format_cursor_size, value));
                 CursorAccessibilityService.refreshCursorSizeFromUi();
             }
         });

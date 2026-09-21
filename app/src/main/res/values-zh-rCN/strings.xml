@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remouse Multilingual</string>
+    <string name="accessibility_description">Remouse Multilingual：把遥控器方向键变成可自由移动的屏幕光标，OK键模拟点击操作。启用后可在任意界面自由移动光标并点击。</string>
+    <string name="title_settings">设置</string>
+    <string name="label_cursor_speed">光标速度</string>
+    <string name="label_acceleration">惯性加速</string>
+    <string name="label_haptic">振动反馈</string>
+    <string name="label_snap">就近吸附</string>
+    <string name="label_auto_hide">空闲隐藏</string>
+    <string name="label_highlight">高亮框</string>
+    <string name="label_cursor_size">光标大小</string>
+    <string name="label_scroll_speed">滚动速度</string>
+    <string name="service_status_enabled">✓ 服务已启用</string>
+    <string name="service_status_disabled">✗ 服务未启用</string>
+    <string name="btn_enable_service">启用无障碍服务</string>
+    <string name="btn_disable_service">关闭服务</string>
+    <string name="mode_cursor">光标模式</string>
+    <string name="mode_scroll">滚动模式</string>
+    <string name="hint_long_press_ok">长按OK键切换模式</string>
+    <string name="toast_mode_cursor">已切换到光标模式 ✛</string>
+    <string name="toast_mode_scroll">已切换到滚动模式 ↕</string>
+    <string name="section_about">关于</string>
+    <string name="about_help">使用说明</string>
+    <string name="help_text">方向键：短按走一小步（对准小按钮）／按住连续移动\nOK键：点击高亮框标出的元素，光标在按钮附近就会自动吸附\n长按OK：切换光标/滚动模式\n长按返回键：暂停/恢复 Remouse Multilingual\n光标顶住屏幕边缘不放：自动翻页\n音量+/-：调整速度\n\n遇到光标点不动的界面，长按返回键暂停，遥控器立刻恢复原本的方向键操作；再长按一次恢复光标。</string>
+    <string name="btn_resume">恢复 Remouse Multilingual</string>
+    <string name="status_paused">⏸ 已暂停（长按返回键恢复）</string>
+    <string name="toast_started_paused">Remouse Multilingual 已启动（当前暂停中，长按返回键恢复）</string>
+    <string name="toast_started">Remouse Multilingual 已启动 ✓</string>
+    <string name="toast_paused">Remouse Multilingual 已暂停 ⏸  长按返回键恢复</string>
+    <string name="toast_resumed">Remouse Multilingual 已恢复 ▶</string>
+    <string name="toast_scroll_speed">滚动速度: %1$d</string>
+    <string name="toast_cursor_speed">光标速度: %1$d</string>
+    <string name="toast_enable_instructions">请找到「%1$s」并启用</string>
+    <string name="toast_accessibility_error">无法打开无障碍设置</string>
+    <string name="format_version">v%1$s</string>
+    <string name="format_cursor_size">%1$d dp</string>
+    <string name="format_speed_value">%1$d</string>
+    <string name="credits_original">基于 zy0816 的开源项目 Remouse</string>
+    <string name="credits_adaptation">多语言适配由 Mohamed LALAH 完成</string>
+</resources>

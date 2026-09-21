@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remouse Multilingual</string>
+    <string name="accessibility_description">يحوّل ⁦Remouse Multilingual⁩ أزرار الاتجاهات في جهاز التحكم إلى مؤشر يتحرك بحرية على الشاشة. اضغط على ⁦OK⁩ للنقر. بعد تفعيل الخدمة، يمكنك تحريك المؤشر والنقر في أي شاشة.</string>
+    <string name="title_settings">الإعدادات</string>
+    <string name="label_cursor_speed">سرعة المؤشر</string>
+    <string name="label_acceleration">التسارع</string>
+    <string name="label_haptic">استجابة بالاهتزاز</string>
+    <string name="label_snap">استهداف العناصر القريبة</string>
+    <string name="label_auto_hide">إخفاء عند الخمول</string>
+    <string name="label_highlight">إطار التمييز</string>
+    <string name="label_cursor_size">حجم المؤشر</string>
+    <string name="label_scroll_speed">سرعة التمرير</string>
+    <string name="service_status_enabled">✓ الخدمة مفعّلة</string>
+    <string name="service_status_disabled">✗ الخدمة غير مفعّلة</string>
+    <string name="btn_enable_service">تفعيل خدمة تسهيل الاستخدام</string>
+    <string name="btn_disable_service">إيقاف الخدمة</string>
+    <string name="mode_cursor">وضع المؤشر</string>
+    <string name="mode_scroll">وضع التمرير</string>
+    <string name="hint_long_press_ok">اضغط مطولًا على ⁦OK⁩ لتبديل الوضع</string>
+    <string name="toast_mode_cursor">تم التبديل إلى وضع المؤشر ✛</string>
+    <string name="toast_mode_scroll">تم التبديل إلى وضع التمرير ↕</string>
+    <string name="section_about">حول التطبيق</string>
+    <string name="about_help">تعليمات الاستخدام</string>
+    <string name="help_text">أزرار الاتجاهات: اضغط ضغطة قصيرة للتحرك خطوة صغيرة (لاستهداف الأزرار الصغيرة)، أو اضغط باستمرار للتحرك المتواصل\n⁦OK⁩: انقر على العنصر المحدد بإطار التمييز؛ تُستهدف الأزرار القريبة تلقائيًا\nاضغط مطولًا على ⁦OK⁩: للتبديل بين وضع المؤشر ووضع التمرير\nاضغط مطولًا على زر الرجوع: لإيقاف ⁦Remouse Multilingual⁩ مؤقتًا أو استئنافه\nاستمر في دفع المؤشر نحو حافة الشاشة: للانتقال تلقائيًا بين صفحات المحتوى\nأزرار الصوت ⁦+/−⁩: لضبط السرعة\n\nإذا لم تستجب شاشة لنقرات المؤشر، فاضغط مطولًا على زر الرجوع للإيقاف المؤقت. يستعيد جهاز التحكم فورًا التنقل المعتاد بأزرار الاتجاهات. اضغط مطولًا مرة أخرى لاستئناف المؤشر.</string>
+    <string name="btn_resume">استئناف ⁦Remouse Multilingual⁩</string>
+    <string name="status_paused">⏸ متوقف مؤقتًا (اضغط مطولًا على زر الرجوع للاستئناف)</string>
+    <string name="toast_started_paused">تم تشغيل ⁦Remouse Multilingual⁩ (متوقف مؤقتًا؛ اضغط مطولًا على زر الرجوع للاستئناف)</string>
+    <string name="toast_started">تم تشغيل ⁦Remouse Multilingual⁩ ✓</string>
+    <string name="toast_paused">تم إيقاف ⁦Remouse Multilingual⁩ مؤقتًا ⏸  اضغط مطولًا على زر الرجوع للاستئناف</string>
+    <string name="toast_resumed">تم استئناف ⁦Remouse Multilingual⁩ ▶</string>
+    <string name="toast_scroll_speed">سرعة التمرير: %1$d</string>
+    <string name="toast_cursor_speed">سرعة المؤشر: %1$d</string>
+    <string name="toast_enable_instructions">ابحث عن «⁦%1$s⁩» وفعّله</string>
+    <string name="toast_accessibility_error">تعذّر فتح إعدادات تسهيل الاستخدام</string>
+    <string name="format_version">v%1$s</string>
+    <string name="format_cursor_size">%1$d dp</string>
+    <string name="format_speed_value">%1$d</string>
+    <string name="credits_original">مبني على مشروع ⁦Remouse⁩ مفتوح المصدر من ⁦zy0816⁩</string>
+    <string name="credits_adaptation">التطوير متعدد اللغات بواسطة ⁦Mohamed LALAH⁩</string>
+</resources>

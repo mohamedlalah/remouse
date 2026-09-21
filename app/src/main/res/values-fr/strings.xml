@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Remouse Multilingual</string>
+    <string name="accessibility_description">Remouse Multilingual transforme les touches directionnelles de votre télécommande en un curseur libre à l’écran. Appuyez sur OK pour cliquer. Une fois le service activé, vous pouvez déplacer le curseur et cliquer sur n’importe quel écran.</string>
+    <string name="title_settings">Paramètres</string>
+    <string name="label_cursor_speed">Vitesse du curseur</string>
+    <string name="label_acceleration">Accélération</string>
+    <string name="label_haptic">Retour haptique</string>
+    <string name="label_snap">Ciblage de proximité</string>
+    <string name="label_auto_hide">Masquer en cas d’inactivité</string>
+    <string name="label_highlight">Surbrillance</string>
+    <string name="label_cursor_size">Taille du curseur</string>
+    <string name="label_scroll_speed">Vitesse de défilement</string>
+    <string name="service_status_enabled">✓ Service activé</string>
+    <string name="service_status_disabled">✗ Service désactivé</string>
+    <string name="btn_enable_service">Activer le service d’accessibilité</string>
+    <string name="btn_disable_service">Désactiver le service</string>
+    <string name="mode_cursor">Mode curseur</string>
+    <string name="mode_scroll">Mode défilement</string>
+    <string name="hint_long_press_ok">Maintenez OK pour changer de mode</string>
+    <string name="toast_mode_cursor">Mode curseur activé ✛</string>
+    <string name="toast_mode_scroll">Mode défilement activé ↕</string>
+    <string name="section_about">À propos</string>
+    <string name="about_help">Instructions</string>
+    <string name="help_text">Touches directionnelles : appuyez brièvement pour avancer d’un petit pas (pour viser les petits boutons), ou maintenez pour un déplacement continu\nOK : cliquez sur l’élément encadré ; les boutons à proximité sont ciblés automatiquement\nMaintenez OK : alternez entre les modes curseur et défilement\nMaintenez RETOUR : mettez Remouse Multilingual en pause ou reprenez son utilisation\nMaintenez le curseur contre un bord de l’écran : faites défiler automatiquement le contenu par pages\nVolume +/− : réglez la vitesse\n\nSi un écran ne réagit pas aux clics du curseur, maintenez RETOUR pour mettre en pause. La télécommande retrouve immédiatement sa navigation directionnelle habituelle. Maintenez à nouveau RETOUR pour réactiver le curseur.</string>
+    <string name="btn_resume">Reprendre Remouse Multilingual</string>
+    <string name="status_paused">⏸ En pause (maintenez RETOUR pour reprendre)</string>
+    <string name="toast_started_paused">Remouse Multilingual démarré (en pause ; maintenez RETOUR pour reprendre)</string>
+    <string name="toast_started">Remouse Multilingual démarré ✓</string>
+    <string name="toast_paused">Remouse Multilingual en pause ⏸  Maintenez RETOUR pour reprendre</string>
+    <string name="toast_resumed">Remouse Multilingual réactivé ▶</string>
+    <string name="toast_scroll_speed">Vitesse de défilement : %1$d</string>
+    <string name="toast_cursor_speed">Vitesse du curseur : %1$d</string>
+    <string name="toast_enable_instructions">Recherchez « %1$s » et activez le service</string>
+    <string name="toast_accessibility_error">Impossible d’ouvrir les paramètres d’accessibilité</string>
+    <string name="format_version">v%1$s</string>
+    <string name="format_cursor_size">%1$d dp</string>
+    <string name="format_speed_value">%1$d</string>
+    <string name="credits_original">Basé sur le projet open source Remouse de zy0816</string>
+    <string name="credits_adaptation">Adaptation multilingue par Mohamed LALAH</string>
+</resources>

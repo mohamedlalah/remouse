@@ -1,4 +1,14 @@
-# Remouse
+# Remouse Multilingual
+
+This repository is a multilingual adaptation of the open-source **Remouse** project by **zy0816**. **Mohamed LALAH** contributed the multilingual adaptation, not the original application.
+
+- Original project: [Remouse by zy0816](https://github.com/zy0816/remouse)
+- Multilingual adaptation: **Mohamed LALAH**
+- Languages: **English** (default/fallback), **French**, **Arabic**, and **Simplified Chinese**, selected automatically from the device locale.
+
+Arabic supports RTL interface text/layout while preserving physical D-pad and cursor directions. All three SeekBars retain LEFT-to-decrease and RIGHT-to-increase behavior. There is no in-app language selector.
+
+The original MIT license and copyright notice are preserved in [LICENSE](LICENSE). The upstream usage and implementation documentation follows; its clone command refers to the original repository.
 
 **Turn your TV remote's D-pad into a free-moving cursor.**
 
@@ -59,7 +69,7 @@ cd remouse
 
 The APK lands in `app/build/outputs/apk/release/`.
 
-Signing: if a `platform.keystore` exists in the project root it's used for release builds (the author signs with an AOSP platform key so the app can be updated in place on a specific TV); without it, Gradle falls back to the default debug signing config and the build still works. No key material is in this repository.
+Signing: if a `platform.keystore` exists in the project root it is used for release builds. Without it, release builds are unsigned; there is no automatic debug-signing fallback for release. For development, use `./gradlew clean :app:assembleDebug :app:lintDebug` with JDK 11 and Android SDK Platform 33. The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk` and uses the standard debug signing configuration. No key material is in this repository.
 
 Requirements: Android 7.0 (API 24) or newer, compiled against API 33.
 
