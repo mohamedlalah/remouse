@@ -8,7 +8,7 @@ This repository is a multilingual adaptation of the open-source **Remouse** proj
 
 Arabic supports RTL interface text/layout while preserving physical D-pad and cursor directions. All three SeekBars retain LEFT-to-decrease and RIGHT-to-increase behavior. There is no in-app language selector.
 
-The original MIT license and copyright notice are preserved in [LICENSE](LICENSE). The upstream usage and implementation documentation follows; its clone command refers to the original repository.
+The original MIT license and copyright notice are preserved in [LICENSE](LICENSE). The usage and implementation documentation below is based on the upstream project.
 
 **Turn your TV remote's D-pad into a free-moving cursor.**
 
@@ -51,25 +51,27 @@ The pointer itself is deliberately quiet: a dark translucent fill with a white s
 
 ## Install
 
-Build the APK (see below) or grab one from [Releases](../../releases), install it, then enable the accessibility service:
+No Remouse Multilingual GitHub Release has been published yet. For now, build the debug APK using the instructions below, install it, then enable the accessibility service. Future published APKs will be listed on this fork’s [Releases page](https://github.com/mohamedlalah/remouse/releases).
 
 ```
-Settings → Accessibility → Remouse → On
+Settings → Accessibility → Remouse Multilingual → On
 ```
 
 Chinese-brand TVs block most of that from the UI. If installing fails or the accessibility toggle refuses to stick, see **[docs/install-on-tcl.md](docs/install-on-tcl.md)** — it covers getting an ADB connection on TCL / FFALCON sets and the three vendor restrictions you have to clear first.
 
 ## Build
 
+Use JDK 11 and Android SDK Platform 33, with `JAVA_HOME` and `ANDROID_HOME` configured for your machine. The fork’s default branch is currently `main` (the original version), so explicitly select `multilingual`:
+
 ```bash
-git clone https://github.com/zy0816/remouse.git
+git clone -b multilingual https://github.com/mohamedlalah/remouse.git
 cd remouse
-./gradlew assembleRelease
+./gradlew clean :app:assembleDebug :app:lintDebug
 ```
 
-The APK lands in `app/build/outputs/apk/release/`.
+The debug APK lands in `app/build/outputs/apk/debug/app-debug.apk`. This is a development build signed with the standard debug signing configuration.
 
-Signing: if a `platform.keystore` exists in the project root it is used for release builds. Without it, release builds are unsigned; there is no automatic debug-signing fallback for release. For development, use `./gradlew clean :app:assembleDebug :app:lintDebug` with JDK 11 and Android SDK Platform 33. The debug APK is written to `app/build/outputs/apk/debug/app-debug.apk` and uses the standard debug signing configuration. No key material is in this repository.
+Release signing: `./gradlew :app:assembleRelease` writes to `app/build/outputs/apk/release/`. If a `platform.keystore` exists in the project root, the existing configuration uses it for release signing. Without it, release builds are unsigned; there is no automatic debug-signing fallback for release. A signed release APK requires a separately managed signing key before distribution. No key material is in this repository.
 
 Requirements: Android 7.0 (API 24) or newer, compiled against API 33.
 
